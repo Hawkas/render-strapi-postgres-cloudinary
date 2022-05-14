@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_amenity_amenities",
+  "info": {
+    "displayName": "Amenities",
+    "icon": "hotel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "wifi": {
+      "type": "boolean",
+      "default": false
+    },
+    "airCondition": {
+      "type": "boolean",
+      "default": false
+    },
+    "elevator": {
+      "type": "boolean",
+      "default": false
+    },
+    "freeParking": {
+      "type": "boolean",
+      "default": false
+    },
+    "petsAllowed": {
+      "type": "boolean",
+      "default": false
+    },
+    "kitchen": {
+      "type": "boolean",
+      "default": false
+    },
+    "television": {
+      "type": "boolean",
+      "default": false
+    },
+    "refrigerator": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

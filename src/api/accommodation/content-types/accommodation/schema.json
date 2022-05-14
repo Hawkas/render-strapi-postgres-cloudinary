@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accommodations",
+  "info": {
+    "singularName": "accommodation",
+    "pluralName": "accommodations",
+    "displayName": "Accommodation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Bed & Breakfast",
+        "Guesthouse",
+        "Hotel"
+      ],
+      "required": true
+    },
+    "amenities": {
+      "displayName": "Amenities",
+      "type": "component",
+      "repeatable": false,
+      "component": "accommodation.amenities"
+    },
+    "images": {
+      "displayName": "images",
+      "type": "component",
+      "repeatable": false,
+      "component": "images.images"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "minLength": 150
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Bergen",
+        "Hardanger",
+        "Voss"
+      ],
+      "required": false,
+      "default": "Bergen"
+    },
+    "imagesTest": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

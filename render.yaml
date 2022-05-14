@@ -32,3 +32,4 @@ services:
 databases:
   - name: strapi
     plan: starter
+    region: frankfurt

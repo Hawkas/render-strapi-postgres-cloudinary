@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_images_rooms",
+  "info": {
+    "displayName": "Room Images",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "roomName": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

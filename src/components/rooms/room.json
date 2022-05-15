@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_rooms_rooms",
+  "info": {
+    "displayName": "Room",
+    "icon": "bed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "integer",
+      "required": true,
+      "max": 9999
+    },
+    "doubleBeds": {
+      "type": "integer",
+      "default": 0,
+      "max": 10
+    },
+    "singleBeds": {
+      "type": "integer",
+      "default": 0,
+      "max": 20
+    },
+    "bathrooms": {
+      "type": "integer",
+      "max": 5,
+      "default": 0
+    },
+    "roomName": {
+      "type": "string",
+      "minLength": 4,
+      "required": true
+    },
+    "features": {
+      "displayName": "Features",
+      "type": "component",
+      "repeatable": true,
+      "component": "rooms.features"
+    }
+  }
+}

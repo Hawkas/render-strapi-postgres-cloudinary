@@ -41,7 +41,8 @@
     "description": {
       "type": "text",
       "required": true,
-      "minLength": 150
+      "minLength": 50,
+      "maxLength": 600
     },
     "location": {
       "type": "enumeration",
@@ -53,12 +54,22 @@
       "required": false,
       "default": "Bergen"
     },
-    "imagesTest": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": true
+    "contactInfo": {
+      "displayName": "Contact Info",
+      "type": "component",
+      "repeatable": false,
+      "component": "accommodation.contact-info"
+    },
+    "rooms": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rooms.room"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "accommodation"
     }
   }
 }

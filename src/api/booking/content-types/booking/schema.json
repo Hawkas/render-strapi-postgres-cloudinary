@@ -20,11 +20,13 @@
     },
     "firstName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 1
     },
     "lastName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 1
     },
     "email": {
       "type": "email",
@@ -32,7 +34,9 @@
     },
     "phoneNumber": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 15,
+      "minLength": 7
     },
     "checkIn": {
       "type": "date",
@@ -41,8 +45,9 @@
     "checkOut": {
       "type": "date"
     },
-    "message": {
-      "type": "text"
+    "additionalDetails": {
+      "type": "text",
+      "maxLength": 500
     },
     "room": {
       "type": "string",

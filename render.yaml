@@ -52,7 +52,7 @@ services:
         fromService:
           name: strapi
           type: web
-          property: hostport
+          property: hostport`/api`
       - key: API_PUBLIC_TOKEN
         sync: false
       - key: REVALIDATE_SECRET

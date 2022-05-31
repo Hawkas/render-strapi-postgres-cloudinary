@@ -38,10 +38,10 @@ services:
     buildCommand: yarn; yarn build
     startCommand: yarn start
     envVars:
-      - key: NODE_VERSION
-        value: ~16.13.2
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: ~16.13.2
       - key: NEXTAUTH_URL
         value: https://holidaze.onrender.com
       - key: NEXTAUTH_SECRET
@@ -50,7 +50,7 @@ services:
         fromService:
           name: strapi
           type: web
-          property: hostport
+          property: host
       - key: API_PUBLIC_TOKEN
         sync: false
       - key: REVALIDATE_SECRET

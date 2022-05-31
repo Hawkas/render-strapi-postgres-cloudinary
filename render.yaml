@@ -35,7 +35,7 @@ services:
     plan: starter
     repo: https://github.com/Hawkas/torbjorn-haukas-project-exam-2.git
     branch: master
-    buildCommand: yarn install && yarn build
+    buildCommand: yarn; yarn build
     startCommand: yarn start
     envVars:
       - key: NODE_VERSION

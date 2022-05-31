@@ -40,6 +40,8 @@ services:
     envVars:
       - key: NODE_VERSION
         value: ~16.13.2
+      - key: PORT
+        value: 9999
       - key: NODE_ENV
         value: production
       - key: NEXTAUTH_URL

@@ -28,7 +28,37 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
-
+  - type: web
+    name: holidaze
+    env: node
+    region: frankfurt
+    plan: starter
+    repo: https://github.com/Hawkas/torbjorn-haukas-project-exam-2.git
+    branch: master
+    buildCommand: yarn; yarn build
+    startCommand: yarn start
+    envVars:
+      - key: NODE_VERSION
+        value: ~16.13.2
+      - key: PORT
+        value: 9999
+      - key: NODE_ENV
+        value: production
+      - key: NEXTAUTH_URL
+        value: https://holidaze.onrender.com
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          name: strapi
+          type: web
+          property: hostport
+      - key: API_PUBLIC_TOKEN
+        sync: false
+      - key: REVALIDATE_SECRET
+        generateValue: true
+      - key: FONTAWESOME_NPM_AUTH_TOKEN
+        sync: false
 databases:
   - name: strapi
     plan: starter

@@ -38,6 +38,10 @@
     "refrigerator": {
       "type": "boolean",
       "default": false
+    },
+    "foodService": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

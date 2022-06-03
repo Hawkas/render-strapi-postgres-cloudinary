@@ -65,16 +65,16 @@
       "repeatable": true,
       "component": "rooms.room"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
     "bookings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "accommodation"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "required": false
     }
   }
 }

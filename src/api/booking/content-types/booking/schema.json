@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "accommodation": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::accommodation.accommodation",
-      "inversedBy": "bookings"
-    },
     "firstName": {
       "type": "string",
       "required": true,
@@ -52,6 +46,12 @@
     "room": {
       "type": "string",
       "required": true
+    },
+    "accommodation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::accommodation.accommodation",
+      "inversedBy": "bookings"
     }
   }
 }

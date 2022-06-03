@@ -47,10 +47,7 @@ services:
       - key: NEXTAUTH_SECRET
         generateValue: true
       - key: NEXT_PUBLIC_API_URL
-        fromService:
-          name: strapi
-          type: web
-          property: host
+        sync: false
       - key: API_PUBLIC_TOKEN
         sync: false
       - key: REVALIDATE_SECRET

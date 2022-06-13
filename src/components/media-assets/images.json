@@ -1,7 +1,7 @@
 {
   "collectionName": "components_images_images",
   "info": {
-    "displayName": "images",
+    "displayName": "imagesComponent",
     "icon": "images",
     "description": ""
   },
@@ -19,7 +19,8 @@
       "displayName": "Rooms",
       "type": "component",
       "repeatable": true,
-      "component": "images.rooms"
+      "component": "media-assets.rooms",
+      "required": true
     }
   }
 }

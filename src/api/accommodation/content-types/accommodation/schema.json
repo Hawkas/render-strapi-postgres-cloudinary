@@ -32,16 +32,10 @@
       "repeatable": false,
       "component": "accommodation.amenities"
     },
-    "images": {
-      "displayName": "images",
-      "type": "component",
-      "repeatable": false,
-      "component": "images.images"
-    },
     "description": {
       "type": "text",
       "required": true,
-      "minLength": 50,
+      "minLength": 30,
       "maxLength": 600
     },
     "location": {
@@ -68,13 +62,29 @@
     "slug": {
       "type": "uid",
       "targetField": "name",
-      "required": false
+      "required": true
     },
     "bookings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "accommodation"
+    },
+    "imagesRooms": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

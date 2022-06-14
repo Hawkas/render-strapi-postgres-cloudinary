@@ -52,6 +52,12 @@
       "relation": "manyToOne",
       "target": "api::accommodation.accommodation",
       "inversedBy": "bookings"
+    },
+    "holidaze": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::holidaze.holidaze",
+      "inversedBy": "bookings"
     }
   }
 }

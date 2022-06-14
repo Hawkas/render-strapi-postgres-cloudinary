@@ -32,6 +32,12 @@
       "required": true,
       "maxLength": 1000,
       "minLength": 25
+    },
+    "holidaze": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::holidaze.holidaze",
+      "inversedBy": "messages"
     }
   }
 }

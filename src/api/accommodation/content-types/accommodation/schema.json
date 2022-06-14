@@ -85,6 +85,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "holidaze": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::holidaze.holidaze",
+      "inversedBy": "accommodations"
     }
   }
 }

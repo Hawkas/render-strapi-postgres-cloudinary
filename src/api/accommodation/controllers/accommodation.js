@@ -14,10 +14,9 @@ module.exports = createCoreController(
       const entity = await strapi.entityService.findOne(
         "api::accommodation.accommodation",
         id,
-        { populate: { cover: true, imagesRooms: true } }
+        { populate: { cover: true, imagesRooms: true, bookings: true } }
       );
       const response = await super.delete(ctx);
-
       if (entity) {
         if (entity.imagesRooms.length > 0) {
           entity.imagesRooms.forEach((image) => {
@@ -26,6 +25,20 @@ module.exports = createCoreController(
         }
         if (entity.cover) {
           strapi.plugins.upload.services.upload.remove(entity.cover);
+        }
+        if (entity.bookings.length > 0) {
+          const bookingEntities = await strapi.entityService.findMany(
+            "api::booking.booking",
+            {
+              populate: { accommodation: true },
+              filters: { accommodation: { id: id } },
+            }
+          );
+          for (let booking of bookingEntities) {
+            await strapi
+              .query("api::booking.booking")
+              .delete({ where: { id: booking.id } });
+          }
         }
       }
       return response;

@@ -46,13 +46,17 @@ services:
         value: ~16.13.2
       - key: NEXTAUTH_URL
         value: https://holidaze.onrender.com
+      - key: NEXTAUTH_URL_INTERNAL
+        value: http://holidaze:9999
       - key: NEXTAUTH_SECRET
         generateValue: true
-      - key: API_URL
-        sync: false
+      - key: API_INTERNAL_URL
+        value: http://strapi-rg7x:10000/api
       - key: NEXT_PUBLIC_LIVE_API
-        value: https://strapi-sult.onrender.com/api
-      - key: API_PUBLIC_TOKEN
+        value: https://strapi-rg7x.onrender.com/api
+      - key: NEXT_PUBLIC_GOOGLE_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_API_TOKEN
         sync: false
       - key: FONTAWESOME_NPM_AUTH_TOKEN
         sync: false

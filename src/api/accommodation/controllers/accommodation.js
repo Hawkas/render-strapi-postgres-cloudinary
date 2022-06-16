@@ -16,7 +16,7 @@ module.exports = createCoreController(
         id,
         { populate: { cover: true, imagesRooms: true, bookings: true } }
       );
-      const response = await super.delete(ctx);
+
       if (entity) {
         if (entity.imagesRooms.length > 0) {
           entity.imagesRooms.forEach((image) => {
@@ -35,13 +35,14 @@ module.exports = createCoreController(
             }
           );
           for (let booking of bookingEntities) {
-            const delBook = await strapi.entityService.delete(
+            await strapi.entityService.delete(
               "api::booking.booking",
               booking.id
             );
           }
         }
       }
+      const response = await super.delete(ctx);
       return response;
     },
     async update(ctx) {

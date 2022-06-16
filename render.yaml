@@ -28,6 +28,8 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
   - type: web
     name: holidaze
     env: node
@@ -37,6 +39,7 @@ services:
     branch: master
     buildCommand: yarn; yarn build
     startCommand: yarn start
+    healthCheckPath: /_healthz
     envVars:
       - key: NODE_ENV
         value: production
@@ -58,3 +61,4 @@ databases:
   - name: strapi
     plan: starter
     region: frankfurt
+    ipAllowList: []

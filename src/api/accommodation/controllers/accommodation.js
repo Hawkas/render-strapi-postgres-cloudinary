@@ -35,7 +35,7 @@ module.exports = createCoreController(
             }
           );
           for (let booking of bookingEntities) {
-            await strapi.db
+            await strapi
               .query("api::booking.booking")
               .delete({ where: { id: { $eq: booking.id } } });
           }

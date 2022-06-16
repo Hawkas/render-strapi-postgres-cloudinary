@@ -39,7 +39,6 @@ services:
     branch: master
     buildCommand: yarn; yarn build
     startCommand: yarn start
-    healthCheckPath: /_healthz
     envVars:
       - key: NODE_ENV
         value: production
